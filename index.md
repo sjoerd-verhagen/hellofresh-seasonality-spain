@@ -55,7 +55,7 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 ## Part 1 – Cleaning the Raw Data
 
 <details>
-  <summary>Step 1.1 – "In what months are different fruits, herbs, and vegetables in season in Spain?"
+  <summary>Step 1.1 – In what months are different fruits, herbs, and vegetables in season in Spain?
 
 </summary
 
