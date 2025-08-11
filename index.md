@@ -60,10 +60,44 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 **Step overview**
 For the first step, 
 
-</details> <details> <summary>Step 1.2 – Cleaning up key columns</summary>
+</details> <details> <summary>Step 1.2 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
 
 **Step overview**
-In this step, I
+In this step, I identified the ten most frequently used fresh ingredients in HelloFresh Spain’s vegetarian recipes. I did this by cleaning the ingredient names, matching them with seasonal data, and counting how many unique recipes each ingredient appeared in.
+
+
+```sql
+WITH clean_seasonality AS (
+    SELECT
+        REPLACE(producto, ' (merged)', '') AS producto_clean,
+        month,
+        in_season
+    FROM seasonality
+)
+SELECT
+    LOWER(TRIM(cs.producto_clean)) AS ingredient,
+    COUNT(DISTINCT r."Unique Code") AS unique_recipe_count
+FROM "HelloFresh" r
+JOIN clean_seasonality cs
+    ON LOWER(TRIM(r."Ingredient")) = LOWER(TRIM(cs.producto_clean))
+GROUP BY LOWER(TRIM(cs.producto_clean))
+ORDER BY unique_recipe_count DESC
+LIMIT 10;
+```
+
+| "ingredient" | "unique_recipe_count" |
+|--------------|-----------------------|
+| "cebolla"    | 219                   |
+| "calabacín"  | 144                   |
+| "zanahoria"  | 101                   |
+| "limón"      | 72                    |
+| "perejil"    | 67                    |
+| "tomate"     | 65                    |
+| "albahaca"   | 64                    |
+| "puerro"     | 55                    |
+| "lima"       | 49                    |
+| "berenjena"  | 46                    |
+
 
 </details> <details>
   <summary>Step 1.3 – Further cleaning</summary
