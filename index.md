@@ -23,7 +23,7 @@ I found an online HelloFresh recipe database for every country where the company
 - A Python script to automatically pull all recipe links per page, massively speeding up the process.
 - My Web Scraper automatically did the rest, collecting my recipes and used ingredients
 
-After scraping and combining the CSV files, I removed duplicates, cleaned ingredient lists (stripping out units/quantities), and ended up with **634 unique vegetarian recipes** from HelloFresh Spain ready for analysis.
+After scraping and combining the CSV files, I removed duplicates, cleaned ingredient lists (stripping out units/quantities), and ended up with **236 unique vegetarian recipes** from HelloFresh Spain ready for analysis.
 
 
 ---
@@ -55,7 +55,7 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 ## Part 1 – Cleaning the Raw Data
 
 <details>
-  <summary>Step 1.1 – Combining the raw files</summary
+  <summary>Step 1.1 – xxx</summary
 
 **Step overview**
 For the first step, 
@@ -63,41 +63,54 @@ For the first step,
 </details> <details> <summary>Step 1.2 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
 
 **Step overview**
-In this step, I identified the ten most frequently used fresh ingredients in HelloFresh Spain’s vegetarian recipes. I did this by cleaning the ingredient names, matching them with seasonal data, and counting how many unique recipes each ingredient appeared in.
-
+In this step, I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
 
 ```sql
 WITH clean_seasonality AS (
     SELECT
-        REPLACE(producto, ' (merged)', '') AS producto_clean,
+        LOWER(TRIM(REPLACE(producto, ' (merged)', ''))) AS producto_clean,
         month,
         in_season
-    FROM seasonality
+    FROM public."11 aug - seasonality"
+),
+
+matched_recipes AS (
+    SELECT DISTINCT
+        LOWER(TRIM(cs.producto_clean)) AS ingredient,
+        r."web-scraper-order" AS recipe_id
+    FROM public."11 aug - recipes exploded" r
+    JOIN clean_seasonality cs
+        ON LOWER(TRIM(r."Ingredients")) = LOWER(TRIM(cs.producto_clean))
+),
+
+total_recipes AS (
+    SELECT COUNT(DISTINCT "web-scraper-order") AS total_count
+    FROM public."11 aug - recipes exploded"
 )
+
 SELECT
-    LOWER(TRIM(cs.producto_clean)) AS ingredient,
-    COUNT(DISTINCT r."Unique Code") AS unique_recipe_count
-FROM "HelloFresh" r
-JOIN clean_seasonality cs
-    ON LOWER(TRIM(r."Ingredient")) = LOWER(TRIM(cs.producto_clean))
-GROUP BY LOWER(TRIM(cs.producto_clean))
+    mr.ingredient,
+    COUNT(DISTINCT mr.recipe_id) AS unique_recipe_count,
+    ROUND( (COUNT(DISTINCT mr.recipe_id)::decimal / tr.total_count) * 100, 2) AS percent_of_total_recipes
+FROM matched_recipes mr
+CROSS JOIN total_recipes tr
+GROUP BY mr.ingredient, tr.total_count
 ORDER BY unique_recipe_count DESC
 LIMIT 10;
 ```
 
-| "ingredient" | "unique_recipe_count" |
-|--------------|-----------------------|
-| "cebolla"    | 219                   |
-| "calabacín"  | 144                   |
-| "zanahoria"  | 101                   |
-| "limón"      | 72                    |
-| "perejil"    | 67                    |
-| "tomate"     | 65                    |
-| "albahaca"   | 64                    |
-| "puerro"     | 55                    |
-| "lima"       | 49                    |
-| "berenjena"  | 46                    |
-
+| ingredient | unique_recipe_count | percent_of_total_recipes |
+|------------|---------------------|--------------------------|
+| cebolla    |                 118 |                      50% |
+| calabacín  |                  48 |                   20.34% |
+| zanahoria  |                  47 |                   19.92% |
+| tomate     |                  27 |                   11.44% |
+| limón      |                  26 |                   11.02% |
+| patata     |                  22 |                    9.32% |
+| perejil    |                  22 |                    9.32% |
+| lima       |                  20 |                    8.47% |
+| albahaca   |                  20 |                    8.47% |
+| berenjena  |                  17 |                     7.2% |
 
 </details> <details>
   <summary>Step 1.3 – Further cleaning</summary
