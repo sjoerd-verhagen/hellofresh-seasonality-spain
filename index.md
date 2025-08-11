@@ -35,8 +35,8 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 - What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
 
 **Part 2: Exploring new possibilities for more local, plant-forward menus**
-- What % of recipes are seasonal each month? What is the Seasonality Trend?
-- Ingredient drivers 1: ingredients most often appear out of season? (chance to change) 
+- What % of recipes are seasonal each month? What is the Seasonality Trend? (which months could use some love?)
+- Ingredient drivers 1: Ingredients most often appear in season? And which ingredients most out of season?
 - Ingredient drivers 2: Which are the ‘forgotten’ vegetables? Where is there a lot of potential? 
 
 
@@ -56,6 +56,10 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 <details>
   <summary>Step 1.1 – In what months are different fruits, herbs, and vegetables in season in Spain?
+
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
+
+This graph shows the number of fresh produce items in season throughout the year in Spain. Interestingly, summer months like **julio** and **agosto** have the fewest fresh items in season, with only 34 and 30 respectively. In contrast, otoño (autumn) and invierno (winter) have the most variety — **octubre** has the highest number with 58 products in season, followed by **noviembre** with 52. When looking at the averages per season, **otoño** has the most produce in season, followed by **invierno**, then primavera (spring), and finally verano (summer) with the least variety.
 
 </summary
 
