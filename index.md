@@ -117,7 +117,7 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 
 </details>
 
-## Part 2 – Exploring new possibilities for more local, plant-forward menus (SQL)
+## Part 2 – Exploring new possibilities for more local, plant-forward menus 
 
 <details>
   <summary>Step 2.1 - Descriptive Statistics </summary
