@@ -114,6 +114,9 @@ LIMIT 10;
 | albahaca   |                  20 |                    8.47% |
 | berenjena  |                  17 |                     7.2% |
 
+_Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are _calabacín_ (zucchini) at 20.34% and _zanahoria_ (carrot) at 19.92%, showing their strong presence. _Tomate_ (tomato) and _limón_ (lemon) feature in about 11% each. Herbs also have a solid role, with _perejil_ (parsley) in 9.32% and _albahaca_ (basil) in 8.47% of recipes. 
+
+</details>
 
 ## Part 2 – Exploring new possibilities for more local, plant-forward menus (SQL)
 
