@@ -1,4 +1,4 @@
-# 🌱📈 Digging into HelloFresh’s Recipe Data for Fresh, Local, Plant-Forward Ideas
+# 🌱📈 Digging into HelloFresh Spains’s Recipe Data for Fresh, Local, Plant-Forward Ideas
 
 **Author:** Sjoerd Verhagen  
 **Tools used:** SQL • Python • Tableau  
