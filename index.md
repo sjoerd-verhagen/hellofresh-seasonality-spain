@@ -54,10 +54,9 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 ## Part 1 – Cleaning the Raw Data
 
-<details>
-  <summary>Step 1.1 – In what months are different fruits, herbs, and vegetables in season in Spain?
+</details> <details> <summary>Step 1.1 – In what months are different fruits, herbs, and vegetables in season in Spain?</summary>
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season2.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
 
 This graph shows the number of fresh produce items in season throughout the year in Spain. Interestingly, summer months like **julio** and **agosto** have the fewest fresh items in season, with only 34 and 30 respectively. In contrast, otoño (autumn) and invierno (winter) have the most variety — **octubre** has the highest number with 58 products in season, followed by **noviembre** with 52. When looking at the averages per season, **otoño** has the most produce in season, followed by **invierno**, then primavera (spring), and finally verano (summer) with the least variety.
 
