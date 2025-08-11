@@ -1,4 +1,4 @@
-# 🏙️ Barcelona Rental Market Analysis
+# 🌱📈 Digging into HelloFresh’s Recipe Data for Fresh, Local, Plant-Forward Ideas
 
 **Author:** Sjoerd Verhagen  
 **Tools used:** SQL • Python • Tableau  
@@ -30,11 +30,11 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 ## 🔍 Key Questions
 
-**Chapter 1: Descriptive statistics**
-- When are fruits,herbs and vegetables in season in Spain?
+**Part 1: Descriptive statistics**
+- In what months are different fruits, herbs, and vegetables in season in Spain?
 - What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
 
-**Chapter 2: exploring new possibilities for more local, plant-forward menus**
+**Part 2: Exploring new possibilities for more local, plant-forward menus**
 - What % of recipes are seasonal each month? What is the Seasonality Trend?
 - Ingredient drivers 1: ingredients most often appear out of season? (chance to change) 
 - Ingredient drivers 2: Which are the ‘forgotten’ vegetables? Where is there a lot of potential? 
@@ -55,7 +55,9 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 ## Part 1 – Cleaning the Raw Data
 
 <details>
-  <summary>Step 1.1 – xxx</summary
+  <summary>Step 1.1 – "In what months are different fruits, herbs, and vegetables in season in Spain?"
+
+</summary
 
 **Step overview**
 For the first step, 
@@ -112,15 +114,8 @@ LIMIT 10;
 | albahaca   |                  20 |                    8.47% |
 | berenjena  |                  17 |                     7.2% |
 
-</details> <details>
-  <summary>Step 1.3 – Further cleaning</summary
 
-**Step overview**
-For step 1.3, I 
-</details>
-
-
-## Part 2 – Data Analysis (SQL)
+## Part 2 – Exploring new possibilities for more local, plant-forward menus (SQL)
 
 <details>
   <summary>Step 2.1 - Descriptive Statistics </summary
