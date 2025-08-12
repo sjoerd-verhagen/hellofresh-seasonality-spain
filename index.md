@@ -125,8 +125,25 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 **Step overview**
 
 In this step, 
-</details>
 
+
+| month      | avg_percent_seasonal | total_ingredients_in_season | total_ingredients |
+|------------|----------------------|-----------------------------|-------------------|
+| enero      |                64.18 |                         278 |               445 |
+| febrero    |                64.18 |                         278 |               445 |
+| marzo      |                56.07 |                         240 |               445 |
+| abril      |                64.18 |                         278 |               445 |
+| mayo       |                83.81 |                         367 |               445 |
+| junio      |                 84.7 |                         370 |               445 |
+| julio      |                 80.6 |                         354 |               445 |
+| agosto     |                81.11 |                         356 |               445 |
+| septiembre |                89.38 |                         394 |               445 |
+| octubre    |                99.37 |                         443 |               445 |
+| noviembre  |                83.66 |                         369 |               445 |
+| deciembre  |                69.41 |                         306 |               445 |
+
+
+</details>
 <details>
   <summary>Step 2.2 – Which districts give the best value for money (€/m²)? </summary
 
