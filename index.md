@@ -68,13 +68,17 @@ with **5** of them in season year-round - ajo, cebolla, patata, plátano and zan
 
 </details> <details> <summary>Step 1.2 – In what months are different fruits, herbs, and vegetables in season in Spain?</summary>
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season2.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
+**Step overview**
 
 
 This graph shows the number of fresh produce items in season throughout the year in Spain. Interestingly, summer months like **julio** and **agosto** have the fewest fresh items in season, with only 34 and 30 respectively. In contrast, otoño (autumn) and invierno (winter) have the most variety: **octubre** has the highest number with 58 products in season, followed by **noviembre** with 52. When looking at the averages per season, **otoño** has the most produce in season, followed by **invierno**, then primavera (spring), and finally verano (summer) with the least variety.
 
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season2.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
 
 </details> <details> <summary>Step 1.3 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
+
+
+**Step overview**
 
 In this step, I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
 
@@ -132,14 +136,18 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 ## Part 2 – Exploring new possibilities for more local, plant-forward menus 
 
 <details>
-  <summary>Step 2.1 - What % of recipes are seasonal each month? What is the Seasonality Trend? (which months could use some love?) </summary
+  <summary>Step 2.1 - How seasonal are HelloFresh recipes each month? Tracking trends and spotting low-season months </summary
 
 
 **Step overview**
 
-This query compares each fresh ingredient in your recipes (those found in the seasonality table) against the seasonality data for each month to determine if it is in season.
-- It then calculates two perspectives: an overall monthly percentage of in-season ingredients across all recipes, and an average percentage of in-season ingredients per recipe.
-- Finally, it outputs for each month the total fresh ingredient mentions, how many of those are in season, the overall percent in season, and the recipe-level average percent in season.
+In this step, I measure the percentage of in-season ingredients in HelloFresh recipes for each month. The query matches every fresh ingredient from the recipes with the seasonality table to check if it’s in season that month.
+
+It calculates both:
+- the overall monthly percentage of in-season ingredients across all recipes
+- the average percentage of in-season ingredients per recipe
+
+The output shows, per month: total fresh ingredient mentions, how many are in season, the overall percentage in season, and the recipe-level average percentage in season.
 
 ```sql
 WITH clean_seasonality AS (
@@ -239,7 +247,7 @@ END;
 | "deciembre"  | 531                 | 381                           | 71.75                       | 72.72                    |
 
 
-We see here that winter has the lowest percentage, and that spring and summer closely follow. In autumn 89,51% of the recipes are in season. When we zoom in on months, we see that Marzo (march) in particular could use some love (62,92%), followed by january, february, april are all close between 69 and 70%. Another trend is in summertime, where we see julio and august around the 71% as well.  
+We see that winter has the lowest percentage of seasonal ingredients, with spring and summer only slightly higher. Autumn stands out with 89.51% of recipes in season. Looking at individual months, March is the lowest at 62.92%, followed by January, February, and April, all hovering between 69% and 70%. A similar dip appears in summer, with July and August both around 71%.
 
 
 </details>
