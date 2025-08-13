@@ -267,7 +267,9 @@ Some, like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot), are fres
 **Step overview**
 In this step...
 
-Forgotten vegetables ccan of course be seen as vegetables which are never used in this batch of recipes. Could be for good reason, where people dont know these vegetables so its les easy to market it as easy and tasty meals. One way of looking at it is seeing forgotten as never used, and vegetables used in a lot of recipes (known, quite common). But other, maybe more intersting for our purposes here, is vegetabels that are currently in use in the recipes, but that are currently underused, especially looking at their seasonality profile. Plus, this means that there are already suppliers known to hellofresh to supply these vegeatbles, making it a quick win and something that one can market as "in season". 
+‘Forgotten’ vegetables are those that do not appear at all in this batch of recipes. This could be because they are less familiar to people and harder to market as easy, tasty meals. One way to define forgotten is simply ‘never used,’ while frequently used vegetables are the well-known, common ones. But for our purposes, a more interesting perspective is to focus on vegetables that are currently used, yet underused, especially considering their seasonality. These have the advantage that HelloFresh already has suppliers for them, making them a quick win and an opportunity to promote as ‘in season.’
+
+
 
 
 
