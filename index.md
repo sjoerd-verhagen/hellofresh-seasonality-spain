@@ -35,9 +35,9 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 - What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
 
 **Part 2: Exploring new possibilities for more local, plant-forward menus**
-- What % of recipes are seasonal each month? What is the Seasonality Trend? (which months could use some love?)
-- Ingredient drivers 1: Ingredients most often appear in season? And which ingredients most out of season?
-- Ingredient drivers 2: Which are the ‘forgotten’ vegetables? Where is there a lot of potential? 
+- 2.1 What % of recipes are seasonal each month? What is the Seasonality Trend? (which months could use some love?)
+- 2.2 Freshness Index: Spotting Overused and Underused Ingredients
+- 2.3 Which are the ‘forgotten’ vegetables? Where is there a lot of potential? 
 
 
 ---
@@ -269,7 +269,13 @@ Some, like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot), are fres
 </details>
 
 <details>
-  <summary>Step 2.3 – Where is the largest rental supply? </summary
+  <summary>Step 2.3 – Which are the ‘forgotten’ vegetables? Where is there a lot of potential? </summary
+
+**Step overview**
+In this step...
+
+Forgotten vegetables ccan of course be seen as vegetables which are never used in this batch of recipes. Could be for good reason, where people dont know these vegetables so its les easy to market it as easy and tasty meals. One way of looking at it is seeing forgotten as never used, and vegetables used in a lot of recipes (known, quite common). But other, maybe more intersting for our purposes here, is vegetabels that are currently in use in the recipes, but that are currently underused, especially looking at their seasonality profile. Plus, this means that there are already suppliers known to hellofresh to supply these vegeatbles, making it a quick win and something that one can market as "in season". 
+
 
 
 </details> <details>
