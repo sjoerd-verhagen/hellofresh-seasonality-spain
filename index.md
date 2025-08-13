@@ -227,9 +227,12 @@ END;
 | "deciembre"  | 531                 | 381                           | 71.75                       | 72.72                    |
 
 
+We see here that winter has the lowest percentage, and that spring and summer closely follow. In autumn 89,51% of the recipes are in season. When we zoom in on months, we see that Marzo (march) in particular could use some love (62,92%), followed by january, february, april are all close between 69 and 70%. Another trend is in summertime, where we see julio and august around the 71% as well.  
+
+
 </details>
 <details>
-  <summary>Step 2.2 – Which districts give the best value for money (€/m²)? </summary
+  <summary>Step 2.2 – Ingredient drivers 1: Ingredients most often appear in season? And which ingredients most out of season? </summary
 
 **Step overview**
 
