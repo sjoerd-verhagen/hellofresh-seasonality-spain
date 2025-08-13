@@ -120,27 +120,111 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 ## Part 2 – Exploring new possibilities for more local, plant-forward menus 
 
 <details>
-  <summary>Step 2.1 - Descriptive Statistics </summary
+  <summary>Step 2.1 - What % of recipes are seasonal each month? What is the Seasonality Trend? (which months could use some love?) </summary
+
 
 **Step overview**
 
-In this step, 
+This query compares each fresh ingredient in your recipes (those found in the seasonality table) against the seasonality data for each month to determine if it is in season.
+- It then calculates two perspectives: an overall monthly percentage of in-season ingredients across all recipes, and an average percentage of in-season ingredients per recipe.
+- Finally, it outputs for each month the total fresh ingredient mentions, how many of those are in season, the overall percent in season, and the recipe-level average percent in season.
 
+```sql
+WITH clean_seasonality AS (
+  SELECT
+    LOWER(TRIM(REPLACE(producto, ' (merged)', ''))) AS producto_clean,
+    LOWER(TRIM(month)) AS month,
+    in_season
+  FROM public."11 aug - seasonality"
+),
 
-| month      | avg_percent_seasonal | total_ingredients_in_season | total_ingredients |
-|------------|----------------------|-----------------------------|-------------------|
-| enero      |                64.18 |                         278 |               445 |
-| febrero    |                64.18 |                         278 |               445 |
-| marzo      |                56.07 |                         240 |               445 |
-| abril      |                64.18 |                         278 |               445 |
-| mayo       |                83.81 |                         367 |               445 |
-| junio      |                 84.7 |                         370 |               445 |
-| julio      |                 80.6 |                         354 |               445 |
-| agosto     |                81.11 |                         356 |               445 |
-| septiembre |                89.38 |                         394 |               445 |
-| octubre    |                99.37 |                         443 |               445 |
-| noviembre  |                83.66 |                         369 |               445 |
-| deciembre  |                69.41 |                         306 |               445 |
+recipe_ingredients AS (
+  SELECT
+    r."web-scraper-order"          AS recipe_id,
+    LOWER(TRIM(r."Ingredients"))    AS ingredient
+  FROM public."12 aug - recipes exploded" r
+),
+
+-- only keep recipe ingredient rows that are fresh produce (appear in seasonality at any month)
+fresh_recipe_ingredients AS (
+  SELECT ri.recipe_id, ri.ingredient
+  FROM recipe_ingredients ri
+  JOIN (SELECT DISTINCT producto_clean FROM clean_seasonality) s
+    ON ri.ingredient = s.producto_clean
+),
+
+-- totals per month counting each ingredient mention once per recipe
+monthly_totals AS (
+  SELECT
+    cs.month,
+    COUNT(*) AS total_ingredient_mentions,
+    COUNT(*) FILTER (WHERE cs.in_season = 1) AS total_in_season_mentions
+  FROM fresh_recipe_ingredients ri
+  JOIN clean_seasonality cs
+    ON ri.ingredient = cs.producto_clean
+  GROUP BY cs.month
+),
+
+-- percent in season per recipe then averaged per month
+matched_per_recipe_month AS (
+  SELECT
+    ri.recipe_id,
+    cs.month,
+    COUNT(*) FILTER (WHERE cs.in_season = 1)    AS ingredients_in_season,
+    COUNT(*)                                    AS total_ingredients
+  FROM fresh_recipe_ingredients ri
+  JOIN clean_seasonality cs
+    ON ri.ingredient = cs.producto_clean
+  GROUP BY ri.recipe_id, cs.month
+),
+
+avg_percent_per_recipe AS (
+  SELECT
+    month,
+    ROUND(AVG((ingredients_in_season::decimal / NULLIF(total_ingredients,0)) * 100), 2) AS avg_percent_per_recipe
+  FROM matched_per_recipe_month
+  GROUP BY month
+)
+
+SELECT
+  mt.month,
+  mt.total_ingredient_mentions      AS total_ingredients,
+  mt.total_in_season_mentions       AS total_ingredients_in_season,
+  ROUND((mt.total_in_season_mentions::decimal / NULLIF(mt.total_ingredient_mentions,0)) * 100, 2)
+    AS percent_in_season_overall,
+  ap.avg_percent_per_recipe
+FROM monthly_totals mt
+LEFT JOIN avg_percent_per_recipe ap USING (month)
+ORDER BY CASE mt.month
+  WHEN 'enero' THEN 1
+  WHEN 'febrero' THEN 2
+  WHEN 'marzo' THEN 3
+  WHEN 'abril' THEN 4
+  WHEN 'mayo' THEN 5
+  WHEN 'junio' THEN 6
+  WHEN 'julio' THEN 7
+  WHEN 'agosto' THEN 8
+  WHEN 'septiembre' THEN 9
+  WHEN 'octubre' THEN 10
+  WHEN 'noviembre' THEN 11
+  WHEN 'diciembre' THEN 12
+END;
+```
+
+| "month"      | "total_ingredients" | "total_ingredients_in_season" | "percent_in_season_overall" | "avg_percent_per_recipe" |
+|--------------|---------------------|-------------------------------|-----------------------------|--------------------------|
+| "enero"      | 531                 | 353                           | 66.48                       | 68.71                    |
+| "febrero"    | 531                 | 359                           | 67.61                       | 70.15                    |
+| "marzo"      | 531                 | 321                           | 60.45                       | 62.92                    |
+| "abril"      | 531                 | 359                           | 67.61                       | 70.15                    |
+| "mayo"       | 531                 | 448                           | 84.37                       | 85.92                    |
+| "junio"      | 531                 | 441                           | 83.05                       | 83.45                    |
+| "julio"      | 531                 | 387                           | 72.88                       | 71.83                    |
+| "agosto"     | 531                 | 383                           | 72.13                       | 70.99                    |
+| "septiembre" | 531                 | 466                           | 87.76                       | 87.53                    |
+| "octubre"    | 531                 | 523                           | 98.49                       | 98.02                    |
+| "noviembre"  | 531                 | 441                           | 83.05                       | 82.99                    |
+| "deciembre"  | 531                 | 381                           | 71.75                       | 72.72                    |
 
 
 </details>
