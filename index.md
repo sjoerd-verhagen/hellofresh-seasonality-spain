@@ -249,7 +249,7 @@ If we compare this to how many produce is actually in season, see graph, we can 
 
 </details>
 <details>
-  <summary>Step 2.2 – Freshness Index: Spotting Overused and Underused Ingredients </summary
+  <summary>Step 2.2 – Ingredient Bias: Spotting Overused and Underused Ingredients </summary
 
 
 **Step overview**
@@ -273,12 +273,13 @@ In this step...
 ‘Forgotten’ vegetables are those that do not appear at all in this batch of recipes. This could be because they are less familiar to people and harder to market as easy, tasty meals. One way to define forgotten is simply ‘never used,’ while frequently used vegetables are the well-known, common ones. But for our purposes, a more interesting perspective is to focus on vegetables that are currently used, yet underused, especially considering their seasonality. These have the advantage that HelloFresh already has suppliers for them, making them a quick win and an opportunity to promote as ‘in season.’
 
 
-
-
-
 </details> <details>
-  <summary>Step 2.6 – Conclusion </summary
+  <summary>Step 2.4 – Low hanging fruit </summary
 </details>
+
+Taking these insights together, a useful approach is to focus on produce that is already used, so it is familiar to the public and suppliers are available, but could appear in more recipes. This is especially relevant for **winter**, where we saw the lowest average freshness at **70%**. On average, more produce is in season than is actually reflected in the recipes, highlighting an opportunity to make better use of what is available. In total, there are **44** fresh produce items in season during this period.
+
+
 
 ## What I learned (and Challenges I faced)
 
