@@ -246,17 +246,25 @@ END;
 | "noviembre"  | 531                 | 441                           | 83.05                       | 82.99                    |
 | "deciembre"  | 531                 | 381                           | 71.75                       | 72.72                    |
 
+**ADD GRAPH** "What % of recipes are seasonal in each month"
 
 We see that winter has the lowest percentage of seasonal ingredients, with spring and summer only slightly higher. Autumn stands out with 89.51% of recipes in season. Looking at individual months, March is the lowest at 62.92%, followed by January, February, and April, all hovering between 69% and 70%. A similar dip appears in summer, with July and August both around 71%.
 
 
 </details>
 <details>
-  <summary>Step 2.2 – Ingredient drivers 1: Ingredients most often appear in season? And which ingredients most out of season? </summary
+  <summary>Step 2.2 – Freshness Index: Spotting Overused and Underused Ingredients </summary
+
 
 **Step overview**
 
-In this step, 
+In this step,  I used a _freshness index_ to compare how often ingredients appear in recipes with how often they are actually in season. By plotting the percentage of the year they’re fresh against their usage percentage, we can see clear patterns. I removed one outlier, onion, which is always in season and covers 50% of recipes.
+
+**Overused** – Ingredients used frequently but not in season for much of the year.
+For example, _calabacín_ (courgette) appears in 20% of recipes but is only in season for half the year. _Tomato_ is fresh seven months per year yet is a regular feature. Others with a high freshness gap include _albahaca_ (basil), _lima_ (lime), and _berenjena_ (aubergine) – each used 7–8% of the time but only in season for four to six months.
+
+**Underused despite high availability** – Ingredients that are in season most of the year but rarely used.
+Some, like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot), are fresh year-round and used often. But others are surprisingly underrepresented, such as _pack choi_ (in season 10 months but only used in one recipe) and _rábano_ (radish, in season 9 months, also just one recipe). 
 
 </details>
 
