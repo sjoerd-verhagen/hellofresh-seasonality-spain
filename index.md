@@ -279,6 +279,7 @@ In this step...
 
 Taking these insights together, a useful approach is to focus on produce that is already used, so it is familiar to the public and suppliers are available, but could appear in more recipes. This is especially relevant for **winter**, where we saw the lowest average freshness at **70%**. On average, more produce is in season than is actually reflected in the recipes, highlighting an opportunity to make better use of what is available. In total, there are **44** fresh produce items in season during this period.
 
+The reason for the low seasonality in winter is that for the top 10 products (not including onion) calabacin (courgete) is out of season, and tomate (tomato), lime is only 1 month in season in winter, and also albahaca and berenjena are out of season. For hearthy  wintery dishes it would be good to look at vegetables that are in season the whole winter, think of califlor, calabaza, pack choi, rabano, remolacha. These are in the lowest teir of usage but are in season throughout the winter.
 
 
 ## What I learned (and Challenges I faced)
