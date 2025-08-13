@@ -19,9 +19,10 @@ Barcelona has a growing food-tech scene, and one company I’ve known for years 
 
 For this project, I wanted to explore how HelloFresh could innovate in line with today’s trends, especially **local sourcing** and **environmental impact**. While they already label some recipes as “seasonal,” I wanted to take it further: What would it look like to analyse their recipe database and explore new possibilities for more local, plant-forward menus?
 
-I found an online HelloFresh recipe database for every country where the company operates. For **HelloFresh Spain**, the vegetarian category alone spanned about **64 pages** (about 12 recipes per page). Direct scraping from the site proved tricky:  the platform is designed to sell recipes, not make them easy to download, to scrape the data I found this hybrid approach:
+I found an online HelloFresh recipe database for every country where the company operates. For **HelloFresh Spain**, the vegetarian category alone spanned about **64 pages** (about 12 recipes per page). Many of these pages were doubles, so I looked at that whilst scraping.Direct scraping from the site proved tricky:  the platform is designed to sell recipes, not make them easy to download, to scrape the data I found this hybrid approach:
 - A Python script to automatically pull all recipe links per page, massively speeding up the process.
 - My Web Scraper automatically did the rest, collecting my recipes and used ingredients
+- Afterwards I cleaned the doubles in the data cleaning.
 
 After scraping and combining the CSV files, I removed duplicates, cleaned ingredient lists (stripping out units/quantities), and ended up with **236 unique vegetarian recipes** from HelloFresh Spain ready for analysis.
 
@@ -31,7 +32,7 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 ## 🔍 Key Questions
 
 **Part 1: Descriptive statistics**
-- In what months are different fruits, herbs, and vegetables in season in Spain?
+- Produce Seasonality in Spain
 - What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
 
 **Part 2: Exploring new possibilities for more local, plant-forward menus**
@@ -62,14 +63,6 @@ For this step, I used Greenpeace’s _La Guía de las Frutas y Verduras de Tempo
 
 
 with **5** of them in season year-round - ajo, cebolla, patata, plátano and zanahoria. The median was **7** months in season, with produce such as tomate (tomato), Brócoli and fresas (strawberries).
-
-
-**(GRAPH)**
-
-</details> <details> <summary>Step 1.2 – In what months are different fruits, herbs, and vegetables in season in Spain?</summary>
-
-**Step overview**
-
 
 This graph shows the number of fresh produce items in season throughout the year in Spain. Interestingly, summer months like **julio** and **agosto** have the fewest fresh items in season, with only 34 and 30 respectively. In contrast, otoño (autumn) and invierno (winter) have the most variety: **octubre** has the highest number with 58 products in season, followed by **noviembre** with 52. When looking at the averages per season, **otoño** has the most produce in season, followed by **invierno**, then primavera (spring), and finally verano (summer) with the least variety.
 
