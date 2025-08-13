@@ -75,6 +75,9 @@ This graph shows the number of fresh produce items in season throughout the year
 
 In this step, I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
 
+
+</details> <details> <summary>sql query</summary>
+
 ```sql
 WITH clean_seasonality AS (
     SELECT
@@ -107,7 +110,7 @@ CROSS JOIN total_recipes tr
 GROUP BY mr.ingredient, tr.total_count
 ORDER BY unique_recipe_count DESC
 LIMIT 10;
-```
+```</details>
 
 | ingredient | unique_recipe_count | percent_of_total_recipes |
 |------------|---------------------|--------------------------|
@@ -242,6 +245,8 @@ END;
 **ADD GRAPH** "What % of recipes are seasonal in each month"
 
 We see that winter has the lowest percentage of seasonal ingredients, with spring and summer only slightly higher. Autumn stands out with 89.51% of recipes in season. Looking at individual months, March is the lowest at 62.92%, followed by January, February, and April, all hovering between 69% and 70%. A similar dip appears in summer, with July and August both around 71%.
+
+
 
 
 </details>
