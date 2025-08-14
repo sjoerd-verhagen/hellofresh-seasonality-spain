@@ -61,7 +61,7 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 To understand how well HelloFresh recipes align with what is naturally available, the first step is to map out the seasonality of fresh produce in Spain. For this, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total. 
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Vegs Bubbles.png" width="400">
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Vegs Bubbles.png" width="800">
 
 Out of these, **5** items are available year-round: ajo (garlic), cebolla (onion), patata (potato), plátano (plantain), and zanahoria (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range. In the chart above, greener and larger bubbles mark produce with longer seasonal availability, while smaller, yellower bubbles highlight those with shorter seasons.
 
