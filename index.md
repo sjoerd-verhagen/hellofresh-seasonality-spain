@@ -59,22 +59,22 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 **Step overview**
 
-For this step, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total.
+To understand how well HelloFresh recipes align with what is naturally available, the first step is to map out the seasonality of fresh produce in Spain. For this, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total. 
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Guia-front.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Vegs Bubbles.png" width="400">
 
-Out of these, **5** items are available year-round: ajo (garlic), cebolla (onion), patata (potato), plátano (plantain), and zanahoria (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range.
+Out of these, **5** items are available year-round: ajo (garlic), cebolla (onion), patata (potato), plátano (plantain), and zanahoria (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range. In the chart above, greener and larger bubbles mark produce with longer seasonal availability, while smaller, yellower bubbles highlight those with shorter seasons.
 
 The chart below shows how many products are in season each month. Summer months such as _julio_ (July) with **34** items and _agosto_ (August) with **30** items have the lowest variety, while _octubre_ (October) peaks with **58** items in season, followed by noviembre (November) with **52**. By season, _otoño_ (autumn) has the highest variety, then _invierno_ (winter), followed by _primavera_ (spring). _Verano_ (summer) has the fewest options.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season2.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
 
-</details> <details> <summary>Step 1.3 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
+</details> <details> <summary>Step 1.2 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
 
 
 **Step overview**
 
-In this step, I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
+After mapping Spain’s produce seasonality, the next step is to see which fresh ingredients HelloFresh uses most often in its vegetarian recipes. I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
 
 
 ```sql
@@ -136,13 +136,13 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 
 **Step overview**
 
-In this step, I measure the percentage of in-season ingredients in HelloFresh recipes for each month. The query matches every fresh ingredient from the recipes with the seasonality table to check if it’s in season that month.
+With the seasonality map complete and the most common ingredients identified, the next step is to measure how closely HelloFresh recipes follow the seasonal calendar. This step calculates the percentage of in-season ingredients in HelloFresh recipes for each month by matching every fresh ingredient with the seasonality table to see if it is in season at that time.
 
 It calculates both:
 - the overall monthly percentage of in-season ingredients across all recipes
 - the average percentage of in-season ingredients per recipe
 
-The output shows, per month: total fresh ingredient mentions, how many are in season, the overall percentage in season, and the recipe-level average percentage in season.
+The output shows, per month, total fresh ingredient mentions, how many are in season, the overall percentage in season, and the recipe level average percentage in season.
 
 ```sql
 WITH clean_seasonality AS (
@@ -243,10 +243,9 @@ END;
 
 **ADD GRAPH** "What % of recipes are seasonal in each month"
 
-We see that winter has the lowest percentage of seasonal ingredients, with spring and summer only slightly higher. Autumn stands out with 89.51% of recipes in season. Looking at individual months, March is the lowest at 62.92%, followed by January, February, and April, all hovering between 69% and 70%. A similar dip appears in summer, with July and August both around 71%.
+Winter has the lowest share of seasonal ingredients in recipes, with spring and summer only slightly higher. Autumn stands out, with 89.51% of recipe ingredients in season. On the monthly level, March is the lowest at 62.92%, followed by January, February, and April, all between 69% and 70%. A similar dip appears in summer, with July and August both around 71%.
 
-If we compare this to how many produce is actually in season, see graph, we can compare months where a lot of produce in season with months where a lot of produce is not fresh. We see something interesting happening here, namely, in **winter**, where there is the lowest average freshness (70%) of produce, there are on average more produce in season than is reflected in the recipes. Showing potential in bettering that potential. 
-
+When we compare this to the actual availability of fresh produce (see graph), we can spot months where many items are in season but are not reflected in the recipes. This is most striking in winter, where average recipe freshness is about 70%, yet the number of produce items in season is higher. This gap suggests clear potential to use more seasonal ingredients during that period.
 
 </details>
 <details>
