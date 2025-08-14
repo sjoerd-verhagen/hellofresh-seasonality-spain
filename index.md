@@ -8,7 +8,7 @@
 
 ## 📌 TL;DR 
 
-I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they align with **local produce seasonality**. Using Greenpeace’s La Guía de las Frutas y Verduras de Temporada _(The Seasonal Fruit and Vegetable Guide)_, I mapped when each ingredient is in season and compared this to recipe usage. While **autumn recipes** scored highest (90%) for freshness, **winter averaged just 70%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. Targeting these could expand HelloFresh’s **seasonal, plant-forward winter menu.** These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low-freshness months, and strengthen marketing of seasonal recipes — potentially reducing costs and improving customer satisfaction.
+I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they align with **local produce seasonality**. Using Greenpeace’s La Guía de las Frutas y Verduras de Temporada _(The Seasonal Fruit and Vegetable Guide)_, I mapped when each ingredient is in season and compared this to recipe usage. While **autumn recipes** scored highest (90%) for freshness, **winter averaged just 71%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. Targeting these could expand HelloFresh’s **seasonal, plant-forward winter menu.** These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low-freshness months, and strengthen marketing of seasonal recipes — potentially reducing costs and improving customer satisfaction.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/tldr.png" width="600">
 
@@ -272,7 +272,7 @@ _Calabacín_ (courgette) appears in 48 recipes (20% of the total) but is only fr
 While staples like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot) are fresh year-round and used often, others such as _pack choi_ (fresh for 10 months but in only one recipe) and _rábano_ (radish, fresh for 9 months but also in just one recipe) are barely present.
 
 **What I learned**
-With the year-round patterns clear, the next step is to focus on _**invierno**_ (winter). Here, the gap is driven by ingredients like _calabacín_ and _tomate_, which are out of season all winter yet appear regularly in recipes. This pulls the overall winter freshness down to around 70% despite 44 produce items being in season — a pattern we explore in detail in Step 2.3.
+With the year-round patterns clear, the next step is to focus on _**invierno**_ (winter). Here, the gap is driven by ingredients like _calabacín_ and _tomate_, which are out of season all winter yet appear regularly in recipes. This pulls the overall winter freshness down to 71% despite 44 produce items being in season — a pattern we explore in detail in Step 2.3.
 
 </details>
 
