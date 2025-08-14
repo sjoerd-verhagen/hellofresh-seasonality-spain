@@ -1,7 +1,7 @@
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/headerv2.png" width="1000">
 
 **Author:** Sjoerd Verhagen  
-**Skills applied:**  **SQL** (joins, aggregation, filtering, calculated fields), **Python** (data cleaning, regex, web scraping), **Tableau** (trend analysis, data visualisation), Google Sheets (data QA)
+**Skills applied:**  **SQL** (joins, aggregation, filtering, calculated fields), **Python** (data cleaning, regex, web scraping), **Tableau** (trend analysis, data visualisation), **Google Sheets** (data QA)
 
 ---
 
