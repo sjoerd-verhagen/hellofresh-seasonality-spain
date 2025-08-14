@@ -131,7 +131,7 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 ## Part 2 – Exploring new possibilities for more local, plant-forward menus 
 
 <details>
-  <summary>Step 🌱2.1 - How seasonal are HelloFresh recipes each month? Tracking trends and spotting low-season months </summary
+  <summary>🌱Step 2.1 - How seasonal are HelloFresh recipes each month? Tracking trends and spotting low-season months </summary
 
 
 **Step overview**
@@ -286,7 +286,7 @@ In this bar chart the usage of the ingredients in recipes is displayed. The colo
 As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) are the main overused drivers, followed by _lima_ (lime), _albahaca_ (basil), and _berenjena_ (aubergine). At the other end of the chart are the ingredients with untapped potential: _kale_, _rábano_ (radish), _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot). All are in season throughout winter and often feature in heartier seasonal dishes, yet currently appear in relatively few recipes.
 
 </details> <details>
-  <summary>Step 2.4 – Low hanging fruit </summary
+  <summary>🌱Step 2.4 – Low hanging fruit </summary
 </details>
 
 Taking these insights together, a useful approach is to focus on produce that is already used, so it is familiar to the public and suppliers are available, but could appear in more recipes. This is especially relevant for **winter**, where we saw the lowest average freshness at **70%**. On average, more produce is in season than is actually reflected in the recipes, highlighting an opportunity to make better use of what is available. In total, there are **44** fresh produce items in season during this period.
