@@ -301,3 +301,14 @@ By increasing the presence of these seasonal winter vegetables, HelloFresh could
 
 ## 🚧 What I learned (and Challenges I faced)
 
+Cleaning the data was one of the most time-consuming parts of this project. Ingredient names appeared in multiple formats, with different capitalisation and wording, which had to be standardised before analysis. For example: 
+1. Floretes de coliflor → coliflor (cauliflower)
+2. Brotes de espinacas → espinaca (spinach)
+3. Remolacha cocida → remolacha (beetroot)
+4. Maíz dulce → maíz (corn)
+
+The seasonality source, Greenpeace’s produce guide, was another limitation. It does not include all items grown in Spain or used in HelloFresh recipes, such as _chalota_ (shallot), _certain pumpkins_, _mushrooms_ (portobello, champiñón), and _cebollino_ (chives). This meant some seasonal opportunities could not be analysed.
+
+**How I overcame this**
+I created a cleaned ingredient list by normalising names and merging duplicates, then focused the analysis on items present in both datasets to ensure accurate matching. Where produce was missing from the Greenpeace list, I noted it separately so, if of interest, future iterations can expand the scope.
+
