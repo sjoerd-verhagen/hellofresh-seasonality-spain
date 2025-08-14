@@ -2,6 +2,7 @@
 
 **Author:** Sjoerd Verhagen  
 **Tools used:** SQL • Python • Tableau  
+**Skills applied:**  SQL (joins, aggregation, filtering, calculated fields), Python (data cleaning, regex, web scraping), Tableau (trend analysis, data visualisation), Google Sheets (data QA)
 **Live Tableau dashboard:** [View Here](https://public.tableau.com/views/YOUR-DASHBOARD-LINK)
 
 
@@ -9,7 +10,7 @@
 
 ## 📌 TL;DR 
 
-I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they align with **local produce seasonality**. Using Greenpeace’s La Guía de las Frutas y Verduras de Temporada _(The Seasonal Fruit and Vegetable Guide)_, I mapped when each ingredient is in season and compared this to recipe usage. While **autumn recipes** scored highest (90%) for freshness, **winter averaged just 70%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. Targeting these could expand HelloFresh’s **seasonal, plant-forward winter menu.**
+I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they align with **local produce seasonality**. Using Greenpeace’s La Guía de las Frutas y Verduras de Temporada _(The Seasonal Fruit and Vegetable Guide)_, I mapped when each ingredient is in season and compared this to recipe usage. While **autumn recipes** scored highest (90%) for freshness, **winter averaged just 70%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. Targeting these could expand HelloFresh’s **seasonal, plant-forward winter menu.** These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low-freshness months, and strengthen marketing of seasonal recipes — potentially reducing costs and improving customer satisfaction.
 
 ---
 
@@ -20,9 +21,12 @@ Barcelona has a growing food-tech scene, and one company I’ve known for years 
 For this project, I wanted to explore how HelloFresh could innovate in line with today’s trends, especially **local sourcing** and **environmental impact**. While they already label some recipes as “seasonal,” I wanted to take it further: What would it look like to analyse their recipe database and explore new possibilities for more local, plant-forward menus?
 
 I found an online HelloFresh recipe database for every country where the company operates. For **HelloFresh Spain**, the vegetarian category alone spanned about **64 pages**, with roughly 12 recipes per page. Many were duplicates, so cleaning would be important. Direct scraping was tricky as the site is designed to sell recipes, not make them easy to download, so I used a hybrid approach:
-- A Python script to quickly collect all recipe links by page.
-- A web scraper to extract the recipe details and ingredient lists.
-- Data cleaning in Python to remove duplicates, strip out units and quantities, and normalise ingredient names.
+I used a hybrid approach to collect and prepare the dataset:
+- **Scraped 64 pages** of vegetarian recipes (about **768** listings) using a Python script to quickly gather all recipe links by page
+- **Extracted recipe details and ingredient lists** with a web scraper
+- **Cleaned and deduplicated** the data in Python, reducing it to **236 unique recipes**
+- **Standardised over 300 ingredient names** by removing units and quantities and normalising wording
+- **Matched recipes** against a seasonality dataset of **74 produce items** for analysis
 
 After combining and cleaning the data, I ended up with **236 unique vegetarian recipes** from HelloFresh Spain ready for analysis.
 
@@ -310,5 +314,4 @@ Cleaning the data was one of the most time-consuming parts of this project. Ingr
 The seasonality source, Greenpeace’s produce guide, was another limitation. It does not include all items grown in Spain or used in HelloFresh recipes, such as _chalota_ (shallot), _certain pumpkins_, _mushrooms_ (portobello, champiñón), and _cebollino_ (chives). This meant some seasonal opportunities could not be analysed.
 
 **How I overcame this**
-I created a cleaned ingredient list by normalising names and merging duplicates, then focused the analysis on items present in both datasets to ensure accurate matching. Where produce was missing from the Greenpeace list, I noted it separately so, if of interest, future iterations can expand the scope.
-
+I created a mapping table to standardise ingredient names and merge duplicates, then tested the cleaned data against a subset of recipes to confirm that joins and seasonal matching worked correctly. While exploring the data in Tableau, I noticed additional naming inconsistencies that had not been addressed in the first pass. This insight prompted me to revisit the raw data, refine the mapping table, and re-run the cleaning process before continuing with the analysis. By doing this, I ensured that the results were based on accurate matches rather than rushing to produce numbers. For produce missing from the Greenpeace list, I documented them separately so they could be incorporated in future iterations of the analysis.
