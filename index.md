@@ -12,7 +12,7 @@ I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they
 
 While **autumn recipes** scored highest (90%) for freshness, **winter averaged just 71%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. 
 
-Targeting these could expand HelloFresh’s **seasonal, plant-forward winter menu.** These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low-freshness months, and strengthen marketing of seasonal recipes — potentially reducing costs and improving customer satisfaction.
+Targeting these could expand HelloFresh’s **seasonal** and **plant forward winter menu**. These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low freshness months, and strengthen marketing of seasonal recipes, potentially reducing costs and improving customer satisfaction.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/tldr2" width="600">
 
