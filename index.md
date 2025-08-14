@@ -57,7 +57,7 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 </details>
 <details>
-<summary>🌱 **Step 1.1 – Produce Seasonality in Spain**</summary>
+<summary>🌱 **Step 1.1 – Produce Seasonality in Spain** </summary>
 
 **Step overview**
 
