@@ -252,28 +252,34 @@ When we compare the recipes to the actual availability of fresh produce (see gra
 
 </details>
 <details>
-  <summary>Step 2.2 – Ingredient Bias: Spotting Overused and Underused Ingredients </summary
-
+  <summary>Step 2.2 – What’s Driving the Winter Freshness Gap? </summary
 
 **Step overview**
 
-In this step,  I used a _freshness index_ to compare how often ingredients appear in recipes with how often they are actually in season. By plotting the percentage of the year they’re fresh against their usage percentage, we can see clear patterns. I removed one outlier, onion, which is always in season and covers 50% of recipes.
+First, I looked at the whole year to see which ingredients are **overused** or **underused** compared to how often they are actually in season. This uses a _freshness gap_ measure: the difference between an ingredient’s share of recipes and the share of the year it is in season.
 
-**Overused** – Ingredients used frequently but not in season for much of the year.
-For example, _calabacín_ (courgette) appears in 20% of recipes but is only in season for half the year. _Tomato_ is fresh seven months per year yet is a regular feature. Others with a high freshness gap include _albahaca_ (basil), _lima_ (lime), and _berenjena_ (aubergine) – each used 7–8% of the time but only in season for four to six months.
+**Overused** – Ingredients used frequently despite being in season for only part of the year.
+_Calabacín_ (courgette) appears in 48 recipes (20% of the total) but is only fresh for six months. _Tomate_ (tomato) is fresh for seven months yet features heavily in recipes, along with _albahaca_ (basil), _lima_ (lime), and _berenjena_ (aubergine), each used 7–8% of the time but only in season for four to six months.
 
 **Underused despite high availability** – Ingredients that are in season most of the year but rarely used.
-Some, like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot), are fresh year-round and used often. But others are surprisingly underrepresented, such as _pack choi_ (in season 10 months but only used in one recipe) and _rábano_ (radish, in season 9 months, also just one recipe). 
+While staples like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot) are fresh year-round and used often, others such as _pack choi_ (fresh for 10 months but in only one recipe) and _rábano_ (radish, fresh for 9 months but also in just one recipe) are barely present.
+
+With the year-round patterns clear, the next step is to focus on _**invierno**_ (winter). Here, the gap is driven by ingredients like calabacín and tomate, which are out of season all winter yet appear regularly in recipes. This pulls the overall winter freshness down to around 70% despite 44 produce items being in season — a pattern we explore in detail in Step 2.3.
+
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/freshness gap.png" width="800">
 
 </details>
 
 <details>
-  <summary>Step 2.3 – Which are the ‘forgotten’ vegetables? Where is there a lot of potential? </summary
+  <summary>Step 2.3 – What’s Driving the Winter Freshness Gap? </summary
 
 **Step overview**
-In this step...
+Now let us zoom in on which ingredients drive the **winter gap**. The aim is to find items that are fresh in _invierno_ (winter) but appear less in recipes, and items that are used a lot when they are not fresh. I use a winter specific freshness index that compares each ingredient’s share of winter recipes with its winter availability month by month. I exclude cebolla as a clear outlier (it appears in 50% of all the recipes, and is always in season). This reveals the main overused and underused drivers in winter and helps explain why recipe freshness sits around seventy percent even though about forty four items are in season.
 
-‘Forgotten’ vegetables are those that do not appear at all in this batch of recipes. This could be because they are less familiar to people and harder to market as easy, tasty meals. One way to define forgotten is simply ‘never used,’ while frequently used vegetables are the well-known, common ones. But for our purposes, a more interesting perspective is to focus on vegetables that are currently used, yet underused, especially considering their seasonality. These have the advantage that HelloFresh already has suppliers for them, making them a quick win and an opportunity to promote as ‘in season.’
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Winter Gap.png" width="800">
+
+In this bar chart the usage of the ingredients in recipes is displayed. The colours range from green (in season all winter), orange (1 month of winter in season), and green (in season all winter), to zoom in to see what ingredients drive the winter gap.
+
 
 
 </details> <details>
