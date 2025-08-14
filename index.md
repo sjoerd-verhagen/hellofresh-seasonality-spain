@@ -59,7 +59,8 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 <details>
 <summary>🌱 Step 1.1 – Produce Seasonality in Spain </summary>
 
-<span style="color:#3CB371; font-weight:bold;">🌱 Step Overview</span>
+
+**Step Overview**
 
 To understand how well HelloFresh recipes align with what is naturally available, the first step is to map out the seasonality of fresh produce in Spain. For this, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total. 
 
