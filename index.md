@@ -1,4 +1,4 @@
-# 🌱 Digging into HelloFresh Spains’s Recipe Data for Fresh, Local, Plant-Forward Ideas 🌱
+# 🌱 Seasonality in HelloFresh Spain’s Vegetarian Recipes: Closing the Winter Freshness Gap 🌱
 
 **Author:** Sjoerd Verhagen  
 **Skills applied:**  **SQL** (joins, aggregation, filtering, calculated fields), **Python** (data cleaning, regex, web scraping), **Tableau** (trend analysis, data visualisation), Google Sheets (data QA)
