@@ -1,7 +1,6 @@
 # 🌱 Digging into HelloFresh Spains’s Recipe Data for Fresh, Local, Plant-Forward Ideas 🌱
 
 **Author:** Sjoerd Verhagen  
-**Live Tableau dashboard:** [View Here](https://public.tableau.com/views/YOUR-DASHBOARD-LINK)
 **Skills applied:**  **SQL** (joins, aggregation, filtering, calculated fields), **Python** (data cleaning, regex, web scraping), **Tableau** (trend analysis, data visualisation), Google Sheets (data QA)
 
 ---
