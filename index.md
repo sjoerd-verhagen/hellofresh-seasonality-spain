@@ -58,9 +58,11 @@ After combining and cleaning the data, I ended up with **236 unique vegetarian r
 <summary>🌱 Step 1.1 – Produce Seasonality in Spain </summary>
 
 **Step Overview**
+
 To understand how well HelloFresh recipes align with what is naturally available, the first step is to map out the seasonality of fresh produce in Spain. For this, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total. 
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/vegs bubbles2.png" width="800">
+
 
 Out of these, **5** items are available year-round: ajo (garlic), cebolla (onion), patata (potato), plátano (plantain), and zanahoria (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range. In the chart, red bubbles mark produce with the shortest seasons, shifting through light to dark green as availability increases, while bubble size still reflects how many months it is in season.
 
@@ -72,6 +74,7 @@ The chart below shows how many products are in season each month. Summer months 
 
 
 **Step overview**
+
 After mapping Spain’s produce seasonality, the next step is to see which fresh ingredients HelloFresh uses most often in its vegetarian recipes. I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
 
 
@@ -273,6 +276,7 @@ With the year-round patterns clear, the next step is to focus on _**invierno**_ 
   <summary>🌱Step 2.3 – What’s Driving the Winter Freshness Gap? </summary>
 
 **Step overview**
+
 Now we zoom in on which ingredients drive the **winter gap**. The goal is to identify items that are fresh in _invierno_ (winter) but appear less in recipes, as well as those that are used heavily despite being out of season. _Cebolla_ is excluded as a clear outlier: it appears in 50% of all recipes and is always in season. This highlights the main overused and underused drivers in winter, helping explain why recipe freshness averages around 70% despite about 44 items being in season.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Winter Gap.png" width="800">
@@ -285,7 +289,8 @@ As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) a
   <summary>🌱Step 2.4 – Summary: Low hanging fruit </summary
 </details>
 
-**My advice**
+**My advice to HelloFresh**
+
 Taking these insights together, the most promising approach is to focus on produce that is already in use, so it is familiar to customers and suppliers, but that could appear more often in recipes. This is especially relevant for winter, when the average freshness drops to **70**%. During this season, there is actually more produce in season than appears in the recipes, with **44** fresh items available.
 
 The lower seasonality score in winter comes from the fact that, among the top 10 products (excluding _cebolla_ (onion)), _calabacín_ (courgette) is out of season, _tomate_ (tomato) and _lima_ (lime) are only in season for one month, and both _albahaca_ (basil) and _berenjena_ (aubergine) are also out of season. For hearty winter dishes, it would be worth exploring vegetables that stay in season throughout winter, such as **_coliflor_** (cauliflower), **_calabaza_** (pumpkin), _**pack choi**_, **_rábano_** (radish), and **_remolacha_** (beetroot). Many of these are currently underused but could bring variety and freshness to the winter menu.
