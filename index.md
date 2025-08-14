@@ -1,4 +1,4 @@
-# 🌱 Seasonality in HelloFresh Spain’s Vegetarian Recipes: Closing the Winter Freshness Gap 🌱
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/header hello.png" width="800">
 
 **Author:** Sjoerd Verhagen  
 **Skills applied:**  **SQL** (joins, aggregation, filtering, calculated fields), **Python** (data cleaning, regex, web scraping), **Tableau** (trend analysis, data visualisation), Google Sheets (data QA)
