@@ -318,4 +318,5 @@ Cleaning the data was one of the most time-consuming parts of this project. Ingr
 The seasonality source, Greenpeace’s produce guide, was another limitation. It does not include all items grown in Spain or used in HelloFresh recipes, such as _chalota_ (shallot), _certain pumpkins_, _mushrooms_ (portobello, champiñón), and _cebollino_ (chives). This meant some seasonal opportunities could not be analysed.
 
 **How I overcame this**
+
 I created a mapping table to standardise ingredient names and merge duplicates, then tested the cleaned data against a subset of recipes to confirm that joins and seasonal matching worked correctly. While exploring the data in Tableau, I noticed additional naming inconsistencies that had not been addressed in the first pass. This insight prompted me to revisit the raw data, refine the mapping table, and re-run the cleaning process before continuing with the analysis. By doing this, I ensured that the results were based on accurate matches rather than rushing to produce numbers. For produce missing from the Greenpeace list, I documented them separately so they could be incorporated in future iterations of the analysis.
