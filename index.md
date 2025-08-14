@@ -276,13 +276,14 @@ With the year-round patterns clear, the next step is to focus on _**invierno**_ 
   <summary>Step 2.3 – What’s Driving the Winter Freshness Gap? </summary
 
 **Step overview**
-Now let us zoom in on which ingredients drive the **winter gap**. The aim is to find items that are fresh in _invierno_ (winter) but appear less in recipes, and items that are used a lot when they are not fresh. I use a winter specific freshness index that compares each ingredient’s share of winter recipes with its winter availability month by month. I exclude cebolla as a clear outlier (it appears in 50% of all the recipes, and is always in season). This reveals the main overused and underused drivers in winter and helps explain why recipe freshness sits around seventy percent even though about forty four items are in season.
+
+Now we zoom in on which ingredients drive the **winter gap**. The goal is to identify items that are fresh in _invierno_ (winter) but appear less in recipes, as well as those that are used heavily despite being out of season. _Cebolla_ is excluded as a clear outlier: it appears in 50% of all recipes and is always in season. This highlights the main overused and underused drivers in winter, helping explain why recipe freshness averages around 70% despite about 44 items being in season.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Winter Gap.png" width="800">
 
 In this bar chart the usage of the ingredients in recipes is displayed. The colours range from green (in season all winter), orange (1 month of winter in season), and green (in season all winter), to zoom in to see what ingredients drive the winter gap.
 
-
+As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) are the main overused drivers, followed by _lima_ (lime), _albahaca_ (basil), and _berenjena_ (aubergine). At the other end of the chart are the ingredients with untapped potential: _kale_, _rábano_ (radish), _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot). All are in season throughout winter and often feature in heartier seasonal dishes, yet currently appear in relatively few recipes.
 
 </details> <details>
   <summary>Step 2.4 – Low hanging fruit </summary
