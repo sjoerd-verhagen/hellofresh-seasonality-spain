@@ -258,6 +258,8 @@ When we compare the recipes to the actual availability of fresh produce (see gra
 
 First, I looked at the whole year to see which ingredients are **overused** or **underused** compared to how often they are actually in season. This uses a _freshness gap_ measure: the difference between an ingredient’s share of recipes and the share of the year it is in season.
 
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/freshness gap.png" width="600">
+
 **Overused** – Ingredients used frequently despite being in season for only part of the year.
 _Calabacín_ (courgette) appears in 48 recipes (20% of the total) but is only fresh for six months. _Tomate_ (tomato) is fresh for seven months yet features heavily in recipes, along with _albahaca_ (basil), _lima_ (lime), and _berenjena_ (aubergine), each used 7–8% of the time but only in season for four to six months.
 
@@ -266,7 +268,7 @@ While staples like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot) a
 
 With the year-round patterns clear, the next step is to focus on _**invierno**_ (winter). Here, the gap is driven by ingredients like calabacín and tomate, which are out of season all winter yet appear regularly in recipes. This pulls the overall winter freshness down to around 70% despite 44 produce items being in season — a pattern we explore in detail in Step 2.3.
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/freshness gap.png" width="800">
+
 
 </details>
 
