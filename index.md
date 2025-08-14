@@ -31,7 +31,7 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 ## 🔍 Key Questions
 
-**Part 1: Descriptive statistics**
+**Part 1: Descriptive Statistics**
 - Produce Seasonality in Spain
 - What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
 
@@ -53,18 +53,19 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 
 ---
 
-## Part 1 – Cleaning the Raw Data
+## Part 1 – Descriptive Statistics
 
 </details> <details> <summary>Step 1.1 – Produce Seasonality in Spain </summary>
 
 **Step overview**
 
-For this step, I used Greenpeace’s _La Guía de las Frutas y Verduras de Temporada_, a file showing which fruits and vegetables are in season in Spain throughout the year. I converted the PDF into a CSV listing each vegetable, the months, and whether it is in season or not. The dataset contains **74** products in total.
+For this step, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total.
 
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Guia-front.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
 
-with **5** of them in season year-round - ajo, cebolla, patata, plátano and zanahoria. The median was **7** months in season, with produce such as tomate (tomato), Brócoli and fresas (strawberries).
+Out of these, **5** items are available year-round: ajo (garlic), cebolla (onion), patata (potato), plátano (plantain), and zanahoria (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range.
 
-This graph shows the number of fresh produce items in season throughout the year in Spain. Interestingly, summer months like **julio** and **agosto** have the fewest fresh items in season, with only 34 and 30 respectively. In contrast, otoño (autumn) and invierno (winter) have the most variety: **octubre** has the highest number with 58 products in season, followed by **noviembre** with 52. When looking at the averages per season, **otoño** has the most produce in season, followed by **invierno**, then primavera (spring), and finally verano (summer) with the least variety.
+The chart below shows how many products are in season each month. Summer months such as _julio_ (July) with **34** items and _agosto_ (August) with **30** items have the lowest variety, while _octubre_ (October) peaks with **58** items in season, followed by noviembre (November) with **52**. By season, _otoño_ (autumn) has the highest variety, then _invierno_ (winter), followed by _primavera_ (spring). _Verano_ (summer) has the fewest options.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season2.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
 
