@@ -70,11 +70,10 @@ The chart below shows how many products are in season each month. Summer months 
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/When-in-season2.png" alt="In what months are different fruits, herbs, and vegetables in season in Spain?" width="800">
 
-</details> <details> <summary>Step 1.2 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
+</details> <details> <summary>🌱 Step 1.2 – What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes?</summary>
 
 
 **Step overview**
-
 After mapping Spain’s produce seasonality, the next step is to see which fresh ingredients HelloFresh uses most often in its vegetarian recipes. I cleaned and matched ingredient names from the seasonality table with those in the recipes table, ensuring consistent formatting by lowercasing and trimming spaces. Then, I counted how many distinct recipes each ingredient appears in to find the most common ingredients. Finally, I calculated the percentage of total recipes that include each ingredient to show its relative frequency.
 
 
@@ -132,7 +131,7 @@ _Cebolla_ (onion) leads by a wide margin, appearing in 50% of recipes. Next are 
 ## Part 2 – Exploring new possibilities for more local, plant-forward menus 
 
 <details>
-  <summary>Step 2.1 - How seasonal are HelloFresh recipes each month? Tracking trends and spotting low-season months </summary
+  <summary>Step 🌱2.1 - How seasonal are HelloFresh recipes each month? Tracking trends and spotting low-season months </summary
 
 
 **Step overview**
@@ -253,7 +252,7 @@ When we compare the recipes to the actual availability of fresh produce (see gra
 
 </details>
 <details>
-  <summary>Step 2.2 – What’s Driving the Winter Freshness Gap? </summary
+  <summary>🌱Step 2.2 – What’s Driving the Winter Freshness Gap? </summary
 
 **Step overview**
 
@@ -274,7 +273,7 @@ With the year-round patterns clear, the next step is to focus on _**invierno**_ 
 </details>
 
 <details>
-  <summary>Step 2.3 – What’s Driving the Winter Freshness Gap? </summary
+  <summary>🌱Step 2.3 – What’s Driving the Winter Freshness Gap? </summary
 
 **Step overview**
 
