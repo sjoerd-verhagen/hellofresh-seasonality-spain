@@ -241,11 +241,14 @@ END;
 | "noviembre"  | 531                 | 441                           | 83.05                       | 82.99                    |
 | "deciembre"  | 531                 | 381                           | 71.75                       | 72.72                    |
 
-**ADD GRAPH** "What % of recipes are seasonal in each month"
 
-Winter has the lowest share of seasonal ingredients in recipes, with spring and summer only slightly higher. Autumn stands out, with 89.51% of recipe ingredients in season. On the monthly level, March is the lowest at 62.92%, followed by January, February, and April, all between 69% and 70%. A similar dip appears in summer, with July and August both around 71%.
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/recipes-seasonal-each-month.png" width="800">
 
-When we compare this to the actual availability of fresh produce (see graph), we can spot months where many items are in season but are not reflected in the recipes. This is most striking in winter, where average recipe freshness is about 70%, yet the number of produce items in season is higher. This gap suggests clear potential to use more seasonal ingredients during that period.
+_Invierno_ (winter) has the lowest share of seasonal ingredients in recipes, with _primavera_ (spring) and _verano_ (summer) only slightly higher. _Atoño_ (autumn) stands out, with 89.51% of recipe ingredients in season. On the monthly level, _Marzo_ (March) is the lowest at 62.92%, followed by _Enero_ (January), _Febrero_ (February), and April, all between 69% and 70%. A similar dip appears in summer, with _Julio_ (July) and _Agosto_ (August) both around 71%.
+
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/seasonal vs recipes use.png" width="800">
+
+When we compare the recipes to the actual availability of fresh produce (see graph), we find months where many items are in season but do not appear in the same proportion in in-season recipes. The clearest example is in _**invierno**_ (winter). During this season, the average recipe freshness is 70,53%, yet on average 44 produce items are in season — the second highest count of all seasons. This mismatch displays there is considerable room to include more seasonal ingredients in winter recipes.
 
 </details>
 <details>
