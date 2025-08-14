@@ -1,4 +1,4 @@
-# 🌱📈 Digging into HelloFresh Spains’s Recipe Data for Fresh, Local, Plant-Forward Ideas
+# 🌱 Digging into HelloFresh Spains’s Recipe Data for Fresh, Local, Plant-Forward Ideas 🌱
 
 **Author:** Sjoerd Verhagen  
 **Tools used:** SQL • Python • Tableau  
@@ -7,7 +7,7 @@
 
 ---
 
-## TL;DR 
+## 📌 TL;DR 
 
 
 
@@ -32,14 +32,13 @@ After scraping and combining the CSV files, I removed duplicates, cleaned ingred
 ## 🔍 Key Questions
 
 **Part 1: Descriptive Statistics**
-- Produce Seasonality in Spain
-- What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
+- 1.1 Produce Seasonality in Spain
+- 1.1 What fresh ingredients are most common in HelloFresh Spain’s vegetarian recipes? 
 
 **Part 2: Exploring new possibilities for more local, plant-forward menus**
-- 2.1 What % of recipes are seasonal each month? What is the Seasonality Trend? (which months could use some love?)
+- 2.1 How seasonal are HelloFresh recipes each month? Tracking trends and spotting low-season months
 - 2.2 Freshness Index: Spotting Overused and Underused Ingredients
-- 2.3 Which are the ‘forgotten’ vegetables? Where is there a lot of potential? 
-
+- 2.3 What’s Driving the Winter Freshness Gap?
 
 ---
 
@@ -290,7 +289,7 @@ As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) a
 Taking these insights together, a useful approach is to focus on produce that is already used, so it is familiar to the public and suppliers are available, but could appear in more recipes. This is especially relevant for **winter**, where we saw the lowest average freshness at **70%**. On average, more produce is in season than is actually reflected in the recipes, highlighting an opportunity to make better use of what is available. In total, there are **44** fresh produce items in season during this period.
 
 The reason for the low seasonality in winter is that for the top 10 products (not including onion) calabacin (courgete) is out of season, and _tomate_ (tomato), lime is only 1 month in season in winter, and also _albahaca_ (basil) and _berenjena_ (aubergene) are out of season. For hearthy  wintery dishes it would be good to look at vegetables that are in season the whole winter, think of califlor, calabaza, pack choi, rabano, remolacha. These are in the lowest teir of usage but are in season throughout the winter.
+</details>
 
-
-## What I learned (and Challenges I faced)
+## 🚧 What I learned (and Challenges I faced)
 
