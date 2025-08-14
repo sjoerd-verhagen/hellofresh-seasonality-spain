@@ -301,7 +301,7 @@ By increasing the presence of these seasonal winter vegetables, HelloFresh could
 
 ## 🚧 What I learned (and Challenges I faced)
 
-Cleaning the data was one of the most time-consuming parts of this project. Ingredient names appeared in multiple formats, with different capitalisation and wording, which had to be standardised before analysis. For example: 
+Cleaning the data was one of the most time-consuming parts of this project. Ingredient names appeared in multiple formats with different types of wording, which had to be standardised before analysis. For example: 
 1. Floretes de coliflor → coliflor (cauliflower)
 2. Brotes de espinacas → espinaca (spinach)
 3. Remolacha cocida → remolacha (beetroot)
