@@ -252,7 +252,7 @@ When we compare the recipes to the actual availability of fresh produce (see gra
 
 </details>
 <details>
-  <summary>🌱Step 2.2 – What’s Driving the Winter Freshness Gap? </summary
+  <summary>🌱Step 2.2 – Freshness Index: Spotting Overused and Underused Ingredients </summary
 
 **Step overview**
 
@@ -266,9 +266,8 @@ _Calabacín_ (courgette) appears in 48 recipes (20% of the total) but is only fr
 **Underused despite high availability** – Ingredients that are in season most of the year but rarely used.
 While staples like _ajo_ (garlic), _patata_ (potato), and _zanahoria_ (carrot) are fresh year-round and used often, others such as _pack choi_ (fresh for 10 months but in only one recipe) and _rábano_ (radish, fresh for 9 months but also in just one recipe) are barely present.
 
-With the year-round patterns clear, the next step is to focus on _**invierno**_ (winter). Here, the gap is driven by ingredients like calabacín and tomate, which are out of season all winter yet appear regularly in recipes. This pulls the overall winter freshness down to around 70% despite 44 produce items being in season — a pattern we explore in detail in Step 2.3.
-
-
+**What I learned**
+With the year-round patterns clear, the next step is to focus on _**invierno**_ (winter). Here, the gap is driven by ingredients like _calabacín_ and _tomate_, which are out of season all winter yet appear regularly in recipes. This pulls the overall winter freshness down to around 70% despite 44 produce items being in season — a pattern we explore in detail in Step 2.3.
 
 </details>
 
@@ -276,7 +275,6 @@ With the year-round patterns clear, the next step is to focus on _**invierno**_ 
   <summary>🌱Step 2.3 – What’s Driving the Winter Freshness Gap? </summary
 
 **Step overview**
-
 Now we zoom in on which ingredients drive the **winter gap**. The goal is to identify items that are fresh in _invierno_ (winter) but appear less in recipes, as well as those that are used heavily despite being out of season. _Cebolla_ is excluded as a clear outlier: it appears in 50% of all recipes and is always in season. This highlights the main overused and underused drivers in winter, helping explain why recipe freshness averages around 70% despite about 44 items being in season.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Winter Gap.png" width="800">
@@ -291,7 +289,7 @@ As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) a
 
 Taking these insights together, a useful approach is to focus on produce that is already used, so it is familiar to the public and suppliers are available, but could appear in more recipes. This is especially relevant for **winter**, where we saw the lowest average freshness at **70%**. On average, more produce is in season than is actually reflected in the recipes, highlighting an opportunity to make better use of what is available. In total, there are **44** fresh produce items in season during this period.
 
-The reason for the low seasonality in winter is that for the top 10 products (not including onion) calabacin (courgete) is out of season, and tomate (tomato), lime is only 1 month in season in winter, and also albahaca and berenjena are out of season. For hearthy  wintery dishes it would be good to look at vegetables that are in season the whole winter, think of califlor, calabaza, pack choi, rabano, remolacha. These are in the lowest teir of usage but are in season throughout the winter.
+The reason for the low seasonality in winter is that for the top 10 products (not including onion) calabacin (courgete) is out of season, and _tomate_ (tomato), lime is only 1 month in season in winter, and also _albahaca_ (basil) and _berenjena_ (aubergene) are out of season. For hearthy  wintery dishes it would be good to look at vegetables that are in season the whole winter, think of califlor, calabaza, pack choi, rabano, remolacha. These are in the lowest teir of usage but are in season throughout the winter.
 
 
 ## What I learned (and Challenges I faced)
