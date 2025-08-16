@@ -13,7 +13,7 @@ While **autumn recipes** scored highest (90%) for freshness, **winter averaged j
 
 Targeting these could expand HelloFresh’s **seasonal** and **plant forward winter menu**. These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low freshness months, and strengthen marketing of seasonal recipes, potentially reducing costs and improving customer satisfaction.
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/tldr3.png" width="800">
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/tldr3.png" width="1000">
 
 ---
 
