@@ -7,11 +7,11 @@
 
 ## 📌 TL;DR 
 
-I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they align with **local produce seasonality**. Using Greenpeace’s La Guía de las Frutas y Verduras de Temporada _(The Seasonal Fruit and Vegetable Guide)_, I mapped when each ingredient is in season and compared this to recipe usage. 
+I analysed **236 vegetarian recipes** from HelloFresh Spain to see how well they align with **local produce seasonality**. Using Greenpeace’s La Guía de las Frutas y Verduras de Temporada _(The Seasonal Fruit and Vegetable Guide)_, I mapped when each fresh ingredient is in season and compared this to recipe usage. 
 
-While **autumn recipes** scored highest (90%) for freshness, **winter averaged just 71%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. 
+While **autumn HelloFresh recipes** scored highest (90%) for freshness, **winter averaged just 71%** despite **44 fresh items** being available, the second-highest number of fresh produce after autumn. The gap is driven by **out-of-season staples** like _calabacín_ (courgette) and _tomate_ (tomato), while **in-season winter vegetables** such as _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot) are underused. 
 
-Targeting these could expand HelloFresh’s **seasonal** and **plant forward winter menu**. These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low freshness months, and strengthen marketing of seasonal recipes, potentially reducing costs and improving customer satisfaction.
+Targeting these could expand HelloFresh’s **seasonal** and **plant forward winter menu**. These insights could help HelloFresh improve ingredient sourcing, increase menu variety in low freshness months, and strengthen marketing of seasonal recipes, potentially reducing costs and improving customer satisfaction. They also match growing customer interest in local, sustainable, and plant-rich meals, making the findings directly relevant for HelloFresh’s audience today.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/tldr3.png" width="1000">
 
@@ -19,19 +19,18 @@ Targeting these could expand HelloFresh’s **seasonal** and **plant forward win
 
 ## 🎯 Background & Project
 
-Barcelona has a growing food-tech scene, and one company I’ve known for years is **HelloFresh**. As a teenager, I learned to cook with their meal kits. At the time, my mother was busy with her studies and my dad isn’t too keen on cooking. So we opted for their subscription, I had first choice out of the three recipes that arrived each week. At the time, I did not think much about my relationship with food, but those meals taught me the basics that still shape how I cook today.
+Barcelona has a fast-growing food-tech scene, and one company I have followed closely is HelloFresh. I first got to know them as a teenager, when their meal kits became a weekly staple at home. With my mother busy studying and my father not much of a cook, we relied on the subscription, and I was always the one to choose the three recipes that arrived each week. Looking back, I realise those meals did more than feed us: they taught me the basics of cooking and shaped the way I approach food to this day.
 
-For this project, I wanted to explore how HelloFresh could innovate in line with today’s trends, especially **local sourcing** and **environmental impact**. While they already label some recipes as “seasonal,” I wanted to take it further: What would it look like to analyse their recipe database and explore new possibilities for more local, plant-forward menus?
+For this project, I wanted to explore how HelloFresh could innovate in line with today’s trends, especially **local sourcing** and **environmental impact**. While they already label some recipes as “seasonal on their website,” I wanted to take it further: What would it look like to analyse their recipe database and explore new possibilities for more local, plant-forward menus?
 
 I found an online HelloFresh recipe database for every country where the company operates. For **HelloFresh Spain**, the vegetarian category alone spanned about **64 pages**, with roughly 12 recipes per page. Many were duplicates, so cleaning would be important. Direct scraping was tricky as the site is designed to sell recipes, not make them easy to download, so I used a hybrid approach:
-I used a hybrid approach to collect and prepare the dataset:
 - **Scraped 64 pages** of vegetarian recipes (about **768** listings) using a Python script to quickly gather all recipe links by page
 - **Extracted recipe details and ingredient lists** with a web scraper
 - **Cleaned and deduplicated** the data in Python, reducing it to **236 unique recipes**
 - **Standardised over 300 ingredient names** by removing units and quantities and normalising wording
 - **Matched recipes** against a seasonality dataset of **74 produce items** for analysis
 
-After combining and cleaning the data, I ended up with **236 unique vegetarian recipes** from HelloFresh Spain ready for analysis.
+This process transformed a messy recipe catalogue into a structured dataset, ready to explore how well HelloFresh’s menus align with seasonal availability.
 
 ---
 
@@ -50,11 +49,11 @@ After combining and cleaning the data, I ended up with **236 unique vegetarian r
 
 ## 🛠️ Tools Used
 
-1. Open Web Scraper for collecting rental data
-2. Python for cleaning and preparing the data
-3. Google Sheets – quick quality checks on the scraped data
-4.  SQL for queries and data analysis
-5. Tableau for creating clear visual insights and dashboard
+1. **Open Web Scraper** for collecting rental data
+2. **Python** for cleaning and preparing the data
+3. **Google Sheets** – quick quality checks on the scraped data
+4.  **SQL** for queries and data analysis
+5. **Tableau** for creating clear visual insights and dashboard
 
 ---
 
@@ -66,12 +65,12 @@ After combining and cleaning the data, I ended up with **236 unique vegetarian r
 
 **Step Overview**
 
-To understand how well HelloFresh recipes align with what is naturally available, the first step is to map out the seasonality of fresh produce in Spain. For this, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ [The Seasonal Fruit and Vegetable Guide], which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total. 
+To understand how well HelloFresh recipes align with what is naturally available, the first step is to map out the seasonality of fresh produce in Spain. For this, I worked with _**Greenpeace’s La Guía de las Frutas y Verduras de Temporada**_ (The Seasonal Fruit and Vegetable Guide), which lists the fruits and vegetables that are in season in Spain each month. I converted the PDF into a CSV, with each row showing the product name, the month, and whether it is in season. The dataset covers **74** fresh products in total. 
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/vegs bubbles2.png" width="800">
 
 
-Out of these, **5** items are available year-round: ajo (garlic), cebolla (onion), patata (potato), plátano (plantain), and zanahoria (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range. In the chart, red bubbles mark produce with the shortest seasons, shifting through light to dark green as availability increases, while bubble size still reflects how many months it is in season.
+Out of these, **5** items are available year-round: _ajo_ (garlic), _cebolla_ (onion), _patata_ (potato), _plátano_ (plantain), and _zanahoria_ (carrot). The median availability is **7** months per year, with produce such as tomate (tomato), brócoli (broccoli), and fresas (strawberries) all falling into this middle range. In the chart, red bubbles mark produce with the shortest seasons, shifting through light to dark green as availability increases, while bubble size still reflects how many months it is in season.
 
 The chart below shows how many products are in season each month. Summer months such as _julio_ (July) with **34** items and _agosto_ (August) with **30** items have the lowest variety, while _octubre_ (October) peaks with **58** items in season, followed by noviembre (November) with **52**. By season, _otoño_ (autumn) has the highest variety, then _invierno_ (winter), followed by _primavera_ (spring). _Verano_ (summer) has the fewest options.
 
@@ -254,7 +253,7 @@ END;
 
 _Invierno_ (winter) has the lowest share of seasonal ingredients in recipes, with _primavera_ (spring) and _verano_ (summer) only slightly higher. _Atoño_ (autumn) stands out, with 89.51% of recipe ingredients in season. On the monthly level, _Marzo_ (March) is the lowest at 62.92%, followed by _Enero_ (January), _Febrero_ (February), and April, all between 69% and 70%. A similar dip appears in summer, with _Julio_ (July) and _Agosto_ (August) both around 71%.
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/seasonal vs recipes use.png" width="800">
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/tldr3.png" width="800">
 
 When we compare the recipes to the actual availability of fresh produce (see graph), we find months where many items are in season but do not appear in the same proportion in in-season recipes. The clearest example is in _**invierno**_ (winter). During this season, the average recipe freshness is 70,53%, yet on average 44 produce items are in season — the second highest count of all seasons. This mismatch displays there is considerable room to include more seasonal ingredients in winter recipes.
 
@@ -264,7 +263,7 @@ When we compare the recipes to the actual availability of fresh produce (see gra
 
 **Step overview**
 
-First, I looked at the whole year to see which ingredients are **overused** or **underused** compared to how often they are actually in season. This uses a _freshness gap_ measure: the difference between an ingredient’s share of recipes and the share of the year it is in season.
+First, I looked at the whole year to see which ingredients are **overused** or **underused** compared to how often they are actually in season. This uses a _freshness gap_ measure: the difference between an ingredient’s share of recipes and the share of the year it is in season. I excluded _cebolla_ (onion), since it appears in around 50 percent of recipes and is available fresh year-round, which would otherwise dominate the scatter plot and make the patterns in other produce harder to see.
 
 <img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/freshness gap.png" width="600">
 
@@ -284,11 +283,11 @@ With the year-round patterns clear, the next step is to focus on _**invierno**_ 
 
 **Step overview**
 
-Now we zoom in on which ingredients drive the **winter gap**. The goal is to identify items that are fresh in _invierno_ (winter) but appear less in recipes, as well as those that are used heavily despite being out of season. _Cebolla_ is excluded as a clear outlier: it appears in 50% of all recipes and is always in season. This highlights the main overused and underused drivers in winter, helping explain why recipe freshness averages around 70% despite about 44 items being in season.
+Next, I focused on the ingredients that drive the **winter freshness gap**. The aim is to spot produce that is in season during _invierno_ (winter) but underused in recipes, as well as items that are used heavily despite being out of season. I excluded _cebolla_ (onion), since it is always in season and features in half of all recipes, making it an outlier that would mask other patterns. This reveals which ingredients are over- or under-represented in winter and helps explain why average recipe freshness sits at around 70 percent, even though about 44 items are in season.
 
-<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Winter Gap.png" width="800">
+<img src="https://github.com/sjoerd-verhagen/hellofresh-seasonality-spain/blob/main/Winter Gap.png" width="1000">
 
-In this bar chart the usage of the ingredients in recipes is displayed. The colours range from green (in season all winter), orange (1 month of winter in season), and green (in season all winter), to zoom in to see what ingredients drive the winter gap.
+In this bar chart the usage of the ingredients in recipes is displayed. The colours range from green (in season all winter), orange (one month of winter in season), and green (in season all winter), to zoom in to see what ingredients drive the winter gap.
 
 As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) are the main overused drivers, followed by _lima_ (lime), _albahaca_ (basil), and _berenjena_ (aubergine). At the other end of the chart are the ingredients with untapped potential: _kale_, _rábano_ (radish), _coliflor_ (cauliflower), _calabaza_ (pumpkin), and _remolacha_ (beetroot). All are in season throughout winter and often feature in heartier seasonal dishes, yet currently appear in relatively few recipes.
 
@@ -298,7 +297,7 @@ As seen in the year-round view, _calabacín_ (courgette) and _tomate_ (tomato) a
 
 **My advice to HelloFresh**
 
-Taking these insights together, the most promising approach is to focus on produce that is already in use, so it is familiar to customers and suppliers, but that could appear more often in recipes. This is especially relevant for winter, when the average freshness drops to **70**%. During this season, there is actually more produce in season than appears in the recipes, with **44** fresh items available.
+Taking these insights together, the most promising approach is to focus on produce that is already in use, so it is familiar to customers and suppliers, but that could appear more often in recipes. This is especially relevant for **winter**, when the average freshness drops to **70**%. During this season, there is actually more produce in season than appears in the recipes, with **44** fresh items available.
 
 The lower seasonality score in winter comes from the fact that, among the top 10 products (excluding _cebolla_ (onion)), _calabacín_ (courgette) is out of season, _tomate_ (tomato) and _lima_ (lime) are only in season for one month, and both _albahaca_ (basil) and _berenjena_ (aubergine) are also out of season. For hearty winter dishes, it would be worth exploring vegetables that stay in season throughout winter, such as **_coliflor_** (cauliflower), **_calabaza_** (pumpkin), _**pack choi**_, **_rábano_** (radish), and **_remolacha_** (beetroot). Many of these are currently underused but could bring variety and freshness to the winter menu.
 
@@ -308,14 +307,7 @@ By increasing the presence of these seasonal winter vegetables, HelloFresh could
 
 ## 🚧 What I learned (and Challenges I faced)
 
-Cleaning the data was one of the most time-consuming parts of this project. Ingredient names appeared in multiple formats with different types of wording, which had to be standardised before analysis. For example: 
-1. Floretes de coliflor → coliflor (cauliflower)
-2. Brotes de espinacas → espinaca (spinach)
-3. Remolacha cocida → remolacha (beetroot)
-4. Maíz dulce → maíz (corn)
+Data cleaning was one of the most time-intensive stages of the project. Ingredient names appeared in multiple formats and had to be standardised before analysis. For example, _floretes de coliflor_ became _coliflor_ (cauliflower), _brotes de espinacas_ became _espinaca_ (spinach), and _remolacha cocida_ became _remolacha_ (beetroot).
 
-The seasonality source, Greenpeace’s produce guide, was another limitation. It does not include all items grown in Spain or used in HelloFresh recipes, such as _chalota_ (shallot), _certain pumpkins_, _mushrooms_ (portobello, champiñón), and _cebollino_ (chives). This meant some seasonal opportunities could not be analysed.
+A further limitation lay in the seasonality source, Greenpeace’s produce guide, which omits several items both grown in Spain and used by HelloFresh, such as _chalota_ (shallot), mushrooms, certain pumpkins, and _cebollino_ (chives). More strikingly, many vegetables were missing from the HelloFresh Spain database itself. Of the 75 produce items available in Spain, only about 30 were represented. Some of these gaps can be explained by fruits that are less suitable for cooking, but others — such as cabbages, Brussels sprouts, and _plátano_ (plantain) — are notable omissions. In the Netherlands, retailers have successfully promoted these kinds of products through “forgotten vegetables” campaigns, reintroducing locally grown, nutritious options to the public. A similar approach could be an opportunity for HelloFresh in Spain.
 
-**How I overcame this**
-
-I created a mapping table to standardise ingredient names and merge duplicates, then tested the cleaned data against a subset of recipes to confirm that joins and seasonal matching worked correctly. While exploring the data in Tableau, I noticed additional naming inconsistencies that had not been addressed in the first pass. This insight prompted me to revisit the raw data, refine the mapping table, and re-run the cleaning process before continuing with the analysis. By doing this, I ensured that the results were based on accurate matches rather than rushing to produce numbers. For produce missing from the Greenpeace list, I documented them separately so they could be incorporated in future iterations of the analysis.
